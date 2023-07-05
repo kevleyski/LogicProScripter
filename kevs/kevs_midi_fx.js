@@ -1,4 +1,4 @@
-// Kevs
+// Kevs Logic Pro Debug API discovery thingy
 
 console.log = (foo) => {
     Trace(foo);
@@ -9,65 +9,20 @@ let firstNote = true;
 function HandleMIDI(e) {
     // API
 
-    /*
-    KEV: event object data...
-detune0
-pitch79
-velocity93
-status144
-isRealtimetrue
-data179
-data30
-data293
-channel1
-port1
-articulationID0
-beatPos0
-toStringfunction () {
-	var returnString = '[' + this.className() +
-	' channel:' + this.channel +
-	' pitch:' + this.pitch +
-  ' [' + MIDI.noteName(this.pitch) + ']' +
-	' velocity:' + this.velocity;
-	if (this.articulationID > 0)
-		returnString += ' articulationID:' + this.articulationID;
-  if (this.port > 1)
-    returnString += ' port:' + this.port;
-	returnString += ']';
-	return returnString;
-}
-sendAfterBeatsfunction sendAfterBeats() {
-    [native code]
-}
-tracefunction trace() {
-    [native code]
-}
-sendAtBeatfunction sendAtBeat() {
-    [native code]
-}
-sendAfterMillisecondsfunction sendAfterMilliseconds() {
-    [native code]
-}
-sendfunction send() {
-    [native code]
-}
-classNamefunction () {
-  return Object.prototype.toString.call(this).slice(8,-1);
-}
-KEV144	79	93
+/*
 KEV: event object data...
-pitch79
-velocity64
-status128
-isRealtimetrue
-data179
-data30
-data264
-channel1
-port1
-articulationID0
-beatPos0
-toStringfunction () {
+pitch=74
+velocity=64
+status=128
+isRealtime=true
+data1=74
+data3=0
+data2=64
+channel=1
+port=1
+articulationID=0
+beatPos=0
+toString=function () {
 	var returnString = '[' + this.className() +
 	' channel:' + this.channel +
 	' pitch:' + this.pitch +
@@ -80,31 +35,21 @@ toStringfunction () {
 	returnString += ']';
 	return returnString;
 }
-sendAfterBeatsfunction sendAfterBeats() {
-    [native code]
-}
-tracefunction trace() {
-    [native code]
-}
-sendAtBeatfunction sendAtBeat() {
-    [native code]
-}
-sendAfterMillisecondsfunction sendAfterMilliseconds() {
-    [native code]
-}
-sendfunction send() {
-    [native code]
-}
-classNamefunction () {
+sendAfterBeats=function sendAfterBeats()
+trace=function trace()
+sendAtBeat=function sendAtBeat()
+sendAfterMilliseconds=function sendAfterMilliseconds()
+send=function send()
+className=function () {
   return Object.prototype.toString.call(this).slice(8,-1);
 }
 
      */
-    if (firstNote) {
+    if (1 || firstNote) {
         console.log("KEV: event object data...")
         firstNote = false;
         for (let i in e) {
-            console.log(i + "" + e[i])
+            console.log(i + "=" + e[i])
         }
     }
 
